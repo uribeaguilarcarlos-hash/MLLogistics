@@ -5,199 +5,148 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Logística Internacional | Soluciones de Carga</title>
     <style>
-        /* Estilos minimalistas y limpios */
-        :root {
-            --color-fondo: #f4f4f6;
-            --color-texto: #1a1a1a;
-            --color-acento: #000000;
-            --color-blanco: #ffffff;
-        }
-
         body, html {
             margin: 0;
             padding: 0;
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            background-color: var(--color-fondo);
-            color: var(--color-texto);
-            line-height: 1.6;
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa; /* Fondo súper claro y limpio */
+            color: #333333;
         }
 
-        /* Encabezado y Navegación */
+        /* Cabecera minimalista */
         header {
-            background-color: var(--color-blanco);
-            padding: 20px 50px;
+            background-color: #ffffff;
+            padding: 20px 40px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            position: sticky;
-            top: 0;
-            z-index: 100;
+            border-bottom: 1px solid #e0e0e0;
         }
 
         .logo {
-            display: flex;
-            align-items: center;
-            gap: 15px;
+            font-size: 24px;
             font-weight: bold;
-            font-size: 1.5rem;
+            color: #000000; /* Detalle en negro */
         }
 
-        .logo img {
-            height: 40px; /* Asegúrate de tener tu logo.png en GitHub */
-        }
-
-        /* Sección Principal (Hero) con la nueva imagen */
+        /* Sección de la Imagen (Terminal Portuaria Garantizada) */
         .hero {
-            position: relative;
-            height: 80vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: var(--color-blanco);
-            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1596700683401-49e0e3713000?q=80&w=1600');
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1586528116311-ad8ed3c812d0?auto=format&fit=crop&w=1600&q=80');
             background-size: cover;
             background-position: center;
+            height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #ffffff;
             padding: 0 20px;
         }
 
-        .hero-content {
-            max-width: 800px;
-        }
-
         .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-            line-height: 1.2;
+            font-size: 3em;
+            margin-bottom: 15px;
+            max-width: 900px;
         }
 
         .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 30px;
-            color: #e0e0e0;
+            font-size: 1.2em;
+            max-width: 700px;
+            line-height: 1.5;
         }
 
-        .btn {
-            display: inline-block;
-            background-color: var(--color-acento);
-            color: var(--color-blanco);
-            padding: 15px 30px;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 4px;
-            transition: background 0.3s ease;
-        }
-
-        .btn:hover {
-            background-color: #333333;
-        }
-
-        /* Sección de Servicios */
-        .servicios {
+        /* Contenedor de las Secciones */
+        .seccion {
             padding: 80px 20px;
-            max-width: 1200px;
+            max-width: 1100px;
             margin: 0 auto;
         }
 
-        .servicios-titulo {
+        .seccion-titulo {
             text-align: center;
-            font-size: 2.5rem;
+            font-size: 2.2em;
             margin-bottom: 50px;
+            color: #000000;
         }
 
-        .grid-servicios {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+        /* Cajas de servicios */
+        .servicios-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            justify-content: center;
         }
 
-        .tarjeta-servicio {
-            background-color: var(--color-blanco);
-            padding: 40px 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            transition: transform 0.3s ease;
+        .caja {
+            background-color: #ffffff;
+            padding: 35px;
+            border-radius: 5px;
+            width: 300px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            border-top: 4px solid #000000; /* Acento sutil en negro */
         }
 
-        .tarjeta-servicio:hover {
-            transform: translateY(-5px);
+        .caja h3 {
+            color: #000000;
+            margin-top: 0;
+            font-size: 1.3em;
         }
 
-        .tarjeta-servicio h3 {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-            color: var(--color-acento);
+        .caja p {
+            line-height: 1.6;
+            color: #555555;
         }
 
-        /* Pie de página */
+        /* Pie de página sólido */
         footer {
-            background-color: var(--color-acento);
-            color: var(--color-blanco);
+            background-color: #000000;
+            color: #ffffff;
             text-align: center;
             padding: 40px 20px;
             margin-top: 40px;
-        }
-
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-            header {
-                flex-direction: column;
-                gap: 15px;
-                padding: 20px;
-            }
         }
     </style>
 </head>
 <body>
 
     <header>
-        <div class="logo">
-            <!-- Aquí va a buscar tu archivo logo.png -->
-            <img src="logo.png" alt="Logo de la Empresa" onerror="this.style.display='none'">
-            Mi Empresa Logística
-        </div>
-        <a href="#contacto" class="btn">Cotizar Envío</a>
+        <div class="logo">Mi Empresa Logística</div>
+        <div style="font-weight: bold;">Contáctanos</div>
     </header>
 
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Conectamos tu cadena de suministro desde China hasta México</h1>
-            <p>Especialistas en importación marítima. Operación directa y sin complicaciones hasta la puerta de tu CEDIS.</p>
-            <a href="#servicios" class="btn">Conoce nuestros servicios</a>
-        </div>
-    </section>
+    <!-- Sección de la imagen del puerto -->
+    <div class="hero">
+        <h1>Conectamos tu cadena de suministro desde China hasta México</h1>
+        <p>Especialistas en importación marítima. Operación directa y sin complicaciones hasta la puerta de tu CEDIS.</p>
+    </div>
 
-    <section id="servicios" class="servicios">
-        <h2 class="servicios-titulo">Nuestra Operación Integral</h2>
-        <div class="grid-servicios">
-            
-            <div class="tarjeta-servicio">
+    <!-- Sección de los servicios que se había borrado -->
+    <div class="seccion">
+        <h2 class="seccion-titulo">Nuestra Operación Integral</h2>
+        
+        <div class="servicios-grid">
+            <div class="caja">
                 <h3>1. Gestión en Origen (China)</h3>
-                <p>Nuestra oficina en China se coordina directamente con los proveedores de tu cliente. Nos encargamos de establecer el booking, realizar el previo en origen y asegurar la carga segura en el buque.</p>
+                <p>Nuestra oficina en China se coordina directamente con los proveedores. Establecemos el booking, hacemos el previo en origen y aseguramos la carga en el buque.</p>
             </div>
 
-            <div class="tarjeta-servicio">
+            <div class="caja">
                 <h3>2. Despacho en México</h3>
-                <p>Al llegar al puerto, gestionamos toda la documentación necesaria con el broker o agente aduanal de tu cliente para garantizar una liberación de contenedor rápida y sin contratiempos.</p>
+                <p>Al llegar al puerto, gestionamos toda la documentación necesaria con el broker del cliente para garantizar la liberación del contenedor rápidamente.</p>
             </div>
 
-            <div class="tarjeta-servicio">
+            <div class="caja">
                 <h3>3. Distribución y Cierre</h3>
-                <p>Flexibilidad total: entregamos la carga directamente en tu CEDIS o finalizamos nuestra labor en puerto. Siempre asegurando la correcta devolución del contenedor vacío a la naviera.</p>
+                <p>Entregamos la carga directamente en tu CEDIS o finalizamos nuestra labor en puerto, encargándonos siempre de la devolución del contenedor vacío.</p>
             </div>
-
         </div>
-    </section>
+    </div>
 
-    <footer id="contacto">
+    <footer>
         <h2>¿Listo para optimizar tu logística?</h2>
         <p>Contáctanos hoy para una cotización personalizada de tus importaciones.</p>
-        <p style="margin-top: 20px; font-size: 0.9rem; opacity: 0.7;">
-            © 2026 Mi Empresa Logística. Todos los derechos reservados.
-        </p>
+        <p style="margin-top: 20px; font-size: 0.9em; opacity: 0.6;">© 2026 Mi Empresa Logística. Todos los derechos reservados.</p>
     </footer>
 
 </body>

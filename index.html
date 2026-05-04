@@ -139,12 +139,14 @@
             
             <div class="contact-form">
                 <h2>CONTACTO</h2>
-                <form>
-                    <input type="text" placeholder="Nombre" required>
-                    <input type="email" placeholder="Email" required>
-                    <textarea placeholder="Mensaje" rows="5" required></textarea>
-                    <button type="submit" class="btn-dark">Contacto</button>
-                </form>
+                    <form action="https://formspree.io/f/xpqbpnqa" method="POST">
+                        <!-- El atributo 'name' es clave para que los datos lleguen ordenados -->
+                        <input type="text" name="Nombre" placeholder="Nombre" required>
+                        <input type="email" name="Email" placeholder="Email" required>
+                        <textarea name="Mensaje" placeholder="Mensaje" rows="5" required></textarea>
+    
+                        <button type="submit" class="btn-dark">Enviar Mensaje</button>
+                    </form>
             </div>
 
             <div class="contact-info">
